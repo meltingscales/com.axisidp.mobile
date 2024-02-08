@@ -23,5 +23,5 @@ adb pull /data/app/~~i4Y8dCzJqsJSNgvXa0aZiQ==/com.axisidp.mobile-BTm9QCqAgoQiVAU
 
 apktool d com.axisidp.mobile.apk
 
-gitleaks detect > gitleaks.txt 2>&1
+gitleaks detect --report-path gitleaks.json
 ```

@@ -1,0 +1,42 @@
+[
+ {
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 6,
+  "EndLine": 7,
+  "StartColumn": 45,
+  "EndColumn": 1,
+  "Match": "key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA",
+  "Secret": "ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA",
+  "File": "apkurlgrep.txt",
+  "SymlinkFile": "",
+  "Commit": "e2c0a68c67698f40c7faca396a24eceb7b871e7a",
+  "Entropy": 5.376221,
+  "Author": "Henry Post",
+  "Email": "henryfbp@gmail.com",
+  "Date": "2024-02-08T23:28:15Z",
+  "Message": "work",
+  "Tags": [],
+  "RuleID": "generic-api-key",
+  "Fingerprint": "e2c0a68c67698f40c7faca396a24eceb7b871e7a:apkurlgrep.txt:generic-api-key:6"
+ },
+ {
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 7,
+  "EndLine": 7,
+  "StartColumn": 51,
+  "EndColumn": 141,
+  "Match": "key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA\"",
+  "Secret": "ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA",
+  "File": "com.axisidp.mobile/assets/direction.html",
+  "SymlinkFile": "",
+  "Commit": "e2c0a68c67698f40c7faca396a24eceb7b871e7a",
+  "Entropy": 5.376221,
+  "Author": "Henry Post",
+  "Email": "henryfbp@gmail.com",
+  "Date": "2024-02-08T23:28:15Z",
+  "Message": "work",
+  "Tags": [],
+  "RuleID": "generic-api-key",
+  "Fingerprint": "e2c0a68c67698f40c7faca396a24eceb7b871e7a:com.axisidp.mobile/assets/direction.html:generic-api-key:7"
+ }
+]
