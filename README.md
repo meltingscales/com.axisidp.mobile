@@ -1,3 +1,16 @@
+## Findings summary
+
+### gitleaks
+
+TODO
+
+### apkurlgrep
+
+TODO
+
+### Snyk SAST
+
+TODO
 
 ## Commands
 
