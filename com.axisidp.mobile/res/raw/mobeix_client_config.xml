@@ -1,0 +1,177 @@
+<!--
+Mobeix Mobile Client Configuration
+Version : 4.7.0
+-->
+
+<mobeix_client_config>
+
+<!-- Basic Application Configuration -->
+
+ <!-- Application Version  why is it required here , we are taking from plist etc -->
+ <attribute name="AppVersion">2.3</attribute>
+
+ <!-- Specifies the main merchant  application identifier of the current application-->
+ <attribute name="MerchantId">ID</attribute>
+
+ <!-- Specifies the parent merchant / application identifier of the current application  , should be the same as Merchant Id if there is not primary and secondary relationship -->
+ <attribute name="ParentMerchantId">ID</attribute>
+
+ <!-- Specifies the theme id with which application will start -->
+ <attribute name="AppDefaultThemeID">21</attribute>
+
+ <!-- Specifies the Internationalization Mode of the application 0 for English only (non unicode)  1 for Internationalization and Non-Hybrid, 2 for Hybrid and AppInternationalization etc -->
+ <attribute name="LanguageEncoding">0</attribute>
+
+ <!-- Specifies the Langugae which support right allignment in Internationalization Mode in format like laguage prefix,language prefix i.e. da,ar etc -->
+ <attribute name="LanguageSupportRightAlligment"></attribute>
+
+  <!-- Specifies the Langugae which support right allignment in Internationalization Mode in format like laguage prefix,language prefix i.e. da,ar etc -->
+ <attribute name="AppLanguageSequence">en_fr</attribute>
+
+ <!-- Specifies the Internationalization Mode of the application 0 for English only (non unicode)  1 for Internationalization and Non-Hybrid, 2 for Hybrid and AppInternationalization etc -->
+ <attribute name="AutoLanguageSelection">0</attribute>
+
+ <!-- Specifies whether to hide or show the Status bar , not applicable for J2ME . 1 for visible or 0 for hide-->
+ <attribute name="StatusBarVisibility">1</attribute>
+
+ <!-- Specifies if the application has to display a splash screen at startup. 1 - DisplaySplash or 0 - not DisplaySplash -->
+ <attribute name="DisplaySplashOnStartup">0</attribute>
+
+ <!-- Specifies if the application has to display a splash screen at startup  1 - use push or 0 - not useing push -->
+ <attribute name="PushNotificationRequired">0</attribute>
+
+ <!-- Specifies the client app session timeout in seconds. '-1' - not use client session timeout. -->
+ <attribute name="TimeOutDuration">290</attribute>
+
+ <!-- Specifies the network communication timeout in seconds in case of getting GPS location wait time for server communication if its not getting location -->
+ <attribute name="GPSCommWaitTimeOutDuration" ></attribute>
+
+ <!-- Specifies the file name of pageflow and respective service id on which this need to be loaded in the format Filename : Service Id , separated by commas. -->
+ <attribute name="PageflowMapping"></attribute>
+
+  <!-- Specifies  the mapping between URL schema and service id in the format URL:Service Id , separated by commas. The URL schemas are used for data submission for the mapped service ids. Service Ids can be specified as a whole or prefix -->
+ <attribute name="URLServiceIdMapping"></attribute>
+
+<!-- Specifies  the mapping between domains and service id in the format Domain : Service Id , separated by commas. Service Ids can be specified as a whole or prefix  -->
+ <attribute name="DomainServiceIdMapping"></attribute>
+
+ <!-- Specifies the whether loading progress spinner can be Cancelable or non-Cancelable with values 0/1. i.e 0 - Cancelable (default), 1 - non - Cancelable. -->
+ <attribute name="ProgressLoadingNonCancelable" >1</attribute>
+
+  <!-- Specifies whether the application supports orientation or not with values 0/1, i.e. 0- supports all orientation, 1- locked to specific orientation -->
+ <attribute name="ApplicationNotSupportsOrientation">1</attribute>
+
+ <!-- Specifies the whether navigation bar should have buttons or not with values 0/1. i.e 0 - with buttons (default), 1 - without buttons. (only android)-->
+ <attribute name="hideNavigationBarButtons">0</attribute>
+
+ <!-- Specifies the AutoSync communication timeout in seconds  -->
+ <attribute name="AutoSyncDataTimeOut">300</attribute>
+ <!-- Specifies the service id for which Handshake request must be sent -->
+ <attribute name="Handshake_Service_Id">OESYNC</attribute>
+
+ <!-- Specifies whether Handshake request need to be sent on startup -->
+ <attribute name="AutoSyncOnAppStart">0</attribute>
+  <!-- Specifies whether Handshake request need to be sent on startup -->
+ <attribute name="PageFlowImageDownloadSave">0</attribute>
+
+ <!-- Specifies the pick from galary image size limit in KBs. if some size is specified we should not pick the images more than that size in galary. if 0 - will not have any check-->
+ <attribute name="GalaryImageSizeLimit">2048</attribute>
+
+ <!-- Specifies the types of image formates supported. i.e. png, jpeg, gif, bmp etc -->
+ <attribute name="GalarySupportedFormats">png,jpg,jpeg,gif,bmp</attribute>
+
+ <!-- Specifies SSL certificate validation 0-normal 1-custom 2-Bypass Default=0 -->
+ <attribute name="customSSLValidation">3</attribute>
+
+ <!-- Specifies whether app should allowed to run Rooted devices or not. 0 - allow on rooted devices, 1 - block rooted devices-->
+ <attribute name="BlockRootedDevices">1</attribute>
+
+ <!-- Use Navigation as Action Bar -->
+ <attribute name="ShowActionBar">0</attribute>
+
+ <!-- For OS Specific Look & Feel  -->
+<attribute name="ShowOSSpecificNative">1</attribute>
+
+
+<!-- Screen Id Values -->
+
+ <!-- Specifies the screen id to be displayed on network timeout  -->
+ <attribute name="TimeOutScreenId">150</attribute>
+
+<!-- Specifies the Screen Id to be displayed in case of internal error -->
+  <attribute name="DefaultErrorScreenId">151</attribute>
+
+  <!-- Specifies the Logout Screen Id -->
+ <attribute name="LogoutScreenId">150</attribute>
+
+ <!-- Specifies the Progress Popup Screen Id for j2me-->
+ <attribute name="ProgressPopupScreenId"></attribute>
+
+<!-- Specifies the Initial Screen Id Displayed on App Startup post the Splash Screen-->
+  <attribute name="InitScreenId">201</attribute>
+
+
+<!-- Communication Parameters -->
+
+<!-- Specifies the Mobeix +ware URL in the format http://domain.com:port  Ex: http://testsuite.tagitmobile.com-->
+
+
+
+ <attribute name="MobeixMiddlewareURL">https://idpm.axisbank.co.in</attribute>
+
+ <!-- Specifies the Mobeix Middleware service action . Ex: /process47/comm -->
+ <attribute name="MobeixMiddlewareDefaultAction">/process/comm</attribute>
+
+ <!-- Specifies the Mobeix Middleware action for Acknowladgement request. Ex: /process47/mts  -->
+ <attribute name="MobeixMiddlewareAcknowladegmentAction">/process/mts</attribute>
+
+<!-- Specifies the network communication timeout in seconds  -->
+ <attribute name="CommTimeOutDuration"></attribute>
+
+ <!-- Specifies if the session id is to be used from the response headers , normally to be used in case if Mobeix is deployed on WebSphere. 1 - use cookies, 0 - not use cookies -->
+ <attribute name="UseCookieFromResponseHeader">1</attribute>
+
+
+<!-- Location Based Settings -->
+
+  <!-- Specifies the Accuracy in meters for determining the current location via GPS-->
+ <attribute name="GPSAccuracy"></attribute>
+
+  <!-- Specifies the Accuracy in meters for determining the current location via GPRS -->
+ <attribute name="GPRSAccuracy"></attribute>
+
+ <!-- Specifies the minimum distance in meters before invoking the middleware service id for location update -->
+ <attribute name="GPSMinimumDistanceUpdate"></attribute>
+
+  <!-- Specifies the minimum distance in meters before invoking the middleware service id for location update -->
+ <attribute name="GPRSMinimumDistanceDataUpdate"></attribute>
+
+  <!-- Specifies if a background timer is to be started which periodically sends location updates to the middleware -->
+ <attribute name="UpdateLocationInBackground">0</attribute>
+
+ <!-- Specifies the middleware service id which receives the background location updates -->
+ <attribute name="BackgroundLocationServiceId">0</attribute>
+
+
+<!-- Social Settings -->
+
+  <!-- Specifies the default  Facebook Master Key , used for ??? -->
+
+ <attribute name="FbMasterKey">281089482244579</attribute>
+
+ <attribute name="FbSecretKey">0470d125f8c73b9e9e36d51ab4208206</attribute>
+
+   <!-- Specifies the default  Twitter Master Key , used for ??? -->
+ <attribute name="TwMasterKey"></attribute>
+
+  <!-- Specifies the default Twitter Secret Key used for ??? -->
+ <attribute name="TwSecretKey"></attribute>
+
+<!-- Specifies whether callbacks should support JSBridge or not. 0 - will not support JSBridge, 1 - will support JSBridge-->
+ <attribute name="HasJSBridgeSupport">0</attribute>
+
+    <!-- Specifies customfonts-->
+    <attribute name="CustomFont">Lato-Bold:Lato-Bold,Lato-Regular:Lato-Regular</attribute>
+
+</mobeix_client_config>
+

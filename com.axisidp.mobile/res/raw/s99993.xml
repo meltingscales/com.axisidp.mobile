@@ -1,0 +1,3 @@
+<scr si="99993" sts="U" ver="1" sti="99999" mi="ID" ty="screen"><gds ne="1"><gd gi="g1" sti="10349372" ne="1" ty="grid" dkc="7" sv="1" sh="1"><com ci="c1" sti="10048193" dkc="8" cjse="validatePasswordChange()" ty="bt" tx="Button"/></gd></gds><evs /><ths ne="0"></ths><script>function callMethod(){
+
+}</script></scr>
