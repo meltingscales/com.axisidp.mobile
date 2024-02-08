@@ -2,11 +2,13 @@
 
 ### gitleaks
 
-TODO
+2 generic API keys are exposed.
 
 ### apkurlgrep
 
-TODO
+- 1 Google Maps API key exposed
+- https://idpm.axisbank.co.in/
+
 
 ### Snyk SAST
 
