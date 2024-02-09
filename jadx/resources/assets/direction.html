@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Map for Android</title>
+<script
+	src="http://maps.google.com/maps?file=api&v=2.x&key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA"
+	type="text/javascript"></script>
+<script type="text/javascript"> 
+
+
+    var map;
+    var directionsPanel;
+    var directions;
+
+
+var polyline;
+
+function initialize() {
+
+if (GBrowserIsCompatible()) {
+map = new GMap2(document.getElementById("map_canvas"));
+//map.setCenter(new GLatLng(1.2939300,103.8546700), 15);
+
+directionsPanel = document.getElementById("route");
+directions = new GDirections(map, directionsPanel);
+GEvent.addListener(directions, "load", directioninfo);
+GEvent.addListener(directions, "error", handleErrors);
+loadDirections();
+}
+}
+
+function handleErrors(){
+	Android.getResponse("error","error");
+	   
+	}
+function loadDirections() {
+var from=Android.getFromLatLong();
+var to=Android.getToLatLong();
+directions.load("from: " + from + " to: " +to, {getPolyLine: true});
+}
+
+
+function directioninfo() {
+
+polyline = directions.getPolyline(); 
+
+var count = polyline.getVertexCount();
+
+
+var i=0;
+//var summary = directions.getSummaryHtml();
+//document.write(summary+"`");
+
+
+//poly line points
+var latlong=0;
+var descStep="";
+while (i < count) {
+var vertex = polyline.getVertex(i);
+var lat = vertex.lat();
+var lon = vertex.lng();
+latlong = latlong + " " + lat + "," + lon
+//document.write(lat + "," + lon);
+//document.write("<br/>");
+i++;
+}
+if (directions.getNumRoutes() > 0) {
+    for (var i = 0; i < directions.getRoute(0).getNumSteps(); i++) {
+    	descStep =descStep+"<br/>"+"&nbsp;"+directions.getRoute(0).getStep(i).getDescriptionHtml();
+}
+ }
+Android.getResponse(latlong,descStep);
+
+//direction descriptions and other details.
+
+
+
+
+}
+</script>
+</head>
+<body style="margin: 0px; padding: 0px;" onload="initialize()">
+<div id="map_canvas" style="width: 100%; height: 100%"></div>
+<div id="route" style="width: 25%; height: 480px; float: right;"></div>
+</body>
+</html>

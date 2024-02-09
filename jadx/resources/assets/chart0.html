@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+			<link rel="stylesheet" href="demo.css" type="text/css">
+				<style>
+					#ext-comp-1010{height:25px;} 
+					#preloader {
+						background: transparent;
+						position:absolute;
+						left:0px; 
+						top:0px; 
+						right: 0px;
+						bottom: 0px;
+						width:50px; 			
+						height:50px;
+						margin: auto;
+						color:#ffffff;
+						opacity: 1;
+					}
+					.x-toolbar-light .x-toolbar-title{color:black;}
+					.x-toolbar-light{background-color:transparent;	
+						
+						background-image:none;
+					}
+					@media all ()
+					</style>
+				
+				<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+				<script type="text/javascript" src="sencha-touch.js"></script>
+				<script type="text/javascript" src="touch-charts.js"></script>
+				<script type="text/javascript" src="main.js"></script>
+				<script>
+					var elementdata = [MXJSONCHARTDATA];
+					if(typeof elementdata == "string")
+					elementdata = $.parseJSON(elementdata)
+					var chartType =  [MXCHARTTYPE]; //0,1 -  pie. 2  - bar
+					var chartClassName ;
+					var numericAxisPosition ;
+					var CategoryAxisPosition ;
+					var seriesAxis ;
+					
+					if(chartType == "2") {
+						chartClassName = "bar" ;
+						numericAxisPosition ="bottom";
+						CategoryAxisPosition ="left" ;
+						seriesAxis = "bottom" ;
+					}
+					
+					else if(chartType == "4") {
+						chartClassName = "column" ;
+						numericAxisPosition ="left" ;
+						CategoryAxisPosition ="bottom" ;
+						seriesAxis ="left" ;
+					}
+					 var font ='8px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif';					
+                     var showLegend=[MXHASLEGEND];
+					var legendposition =[MXLEGENDPOSITION];
+					
+					$(window).load(function(){
+								   preloading();
+								   
+								   
+								   
+								   });
+					$(document).ready(function(){
+									  var chartHeight =  $(window).height()
+									  var chartWidth = $(window).width();
+									  
+									  if(235 > parseInt(chartHeight) || parseInt(chartWidth) < 235 )  {
+									  font ='8px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif';
+									  }
+									  
+									  else if(( 235 < parseInt(chartHeight) && parseInt(chartHeight)< 330)||(310 < parseInt(chartWidth)&& parseInt(chartWidth)< 485)) {
+									  font ='10px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif';
+									  }
+									  else if( (330 < parseInt(chartHeight) && parseInt(chartHeight)< 570) || (310 < parseInt(chartWidth) && parseInt(chartWidth)< 485)) {
+									  font ='12px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif';
+									  }
+									  else if(( 570 < parseInt(chartHeight) && parseInt(chartHeight)< 725)|| (485 < parseInt(chartWidth)&& parseInt(chartWidth) <1200)) {
+									  font ='13px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif';
+									  }
+									  else if(( 725 < parseInt(chartHeight))|| (1200 < parseInt(chartWidth))) {
+									  font ='14px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif';
+									  }
+									  })
+					
+					</script>	
+	</head>
+	<body>
+		<div id="preloader"><img src="loading.gif" alt="Chart loading" /></div>
+	</body>
+</html>
