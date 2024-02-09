@@ -9,10 +9,9 @@
 - 1 Google Maps API key exposed
 - https://idpm.axisbank.co.in/ - Potential attack target, should run nmap and dirb
 
-
 ### Snyk SAST
 
-No results.
+Hardcoded IVs for crypto keys, they use DESede ECB with no padding, they may have XXE, they use AES CBC, and some Medium findings.
 
 ## Commands
 
