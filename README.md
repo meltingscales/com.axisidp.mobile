@@ -12,7 +12,7 @@
 
 ### Snyk SAST
 
-No results.
+Not processed yet.
 
 ## Commands
 
