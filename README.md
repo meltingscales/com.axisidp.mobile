@@ -7,12 +7,12 @@
 ### apkurlgrep
 
 - 1 Google Maps API key exposed
-- https://idpm.axisbank.co.in/
+- https://idpm.axisbank.co.in/ - Potential attack target, should run nmap and dirb
 
 
 ### Snyk SAST
 
-TODO
+No results.
 
 ## Commands
 
